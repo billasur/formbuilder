@@ -1,0 +1,73 @@
+.beautifulLayout {
+  position: relative;
+  overflow: hidden;
+}
+
+.contentContainer {
+  margin: 0 auto;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 10;
+}
+
+.animatedContent {
+  width: 100%;
+}
+
+/* Background styles */
+.gradientBackground {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.dotsBackground {
+  background-color: #f5f5f5;
+  background-image: radial-gradient(#00000010 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.wavesBackground {
+  background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+  position: relative;
+}
+
+.wavesBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f3f4f6' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+/* Dark mode styles */
+:global(.dark) .gradientBackground {
+  background: linear-gradient(135deg, #1f1f1f 0%, #2d3748 100%);
+}
+
+:global(.dark) .dotsBackground {
+  background-color: #141414;
+  background-image: radial-gradient(#ffffff10 1px, transparent 1px);
+}
+
+:global(.dark) .wavesBackground {
+  background: linear-gradient(to bottom, #121212, #1f1f1f);
+}
+
+:global(.dark) .wavesBackground::before {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23141414' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,133.3C672,139,768,181,864,197.3C960,213,1056,203,1152,176C1248,149,1344,107,1392,85.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'%3E%3C/path%3E%3C/svg%3E") no-repeat;
+}
+
+/* Animations */
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 

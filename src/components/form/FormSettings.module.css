@@ -1,0 +1,40 @@
+.settingsCard {
+  margin-bottom: 24px;
+}
+
+.tabs {
+  margin-top: 16px;
+}
+
+.logoUploader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.logoPreview {
+  max-width: 300px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.logoImage {
+  max-width: 100%;
+  max-height: 100px;
+  display: block;
+}
+
+/* Dark mode */
+:global(.dark) .logoPreview {
+  border-color: #434343;
+  background-color: #1f1f1f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .logoPreview {
+    max-width: 100%;
+  }
+} 

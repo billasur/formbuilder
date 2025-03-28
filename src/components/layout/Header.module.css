@@ -1,0 +1,83 @@
+.header {
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  height: 64px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.menuToggle {
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo a {
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.searchBar {
+  width: 300px;
+  margin: 0 24px;
+}
+
+.rightMenu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.userDropdown {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.username {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.darkModeToggle {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.darkModeToggle:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode styles */
+:global(.dark) .header {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #303030;
+}
+
+:global(.dark) .logo a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+:global(.dark) .darkModeToggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+} 

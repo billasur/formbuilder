@@ -1,0 +1,136 @@
+.sharingCard {
+  margin-bottom: 24px;
+}
+
+.publicLinkSection,
+.sharedListSection {
+  padding: 12px 0;
+}
+
+.publishSwitch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.helperText {
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.linkContainer {
+  margin-bottom: 16px;
+}
+
+.sharedList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.emptyListText {
+  text-align: center;
+  padding: 24px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.addUserSection {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.searchResults,
+.groupList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+/* Dark mode styles */
+:global(.dark) .helperText,
+:global(.dark) .emptyListText {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+:global(.dark) .sharedList,
+:global(.dark) .searchResults,
+:global(.dark) .groupList {
+  border-color: #303030;
+}
+
+.section {
+  padding: 16px 0;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.urlContainer {
+  margin: 8px 0 16px;
+}
+
+.embedContainer {
+  margin: 8px 0;
+}
+
+.qrCodeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+}
+
+.qrCodeText {
+  text-align: center;
+}
+
+.permissionsSection {
+  padding: 16px 0;
+}
+
+.permissionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.collaboratorsSection,
+.groupsSection {
+  padding: 16px 0;
+}
+
+.userSearch {
+  margin-bottom: 16px;
+}
+
+.currentCollaborators {
+  margin-top: 16px;
+}
+
+/* Dark mode */
+:global(.dark) .permissionItem {
+  border-bottom-color: #303030;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .permissionItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .permissionItem > div:first-child {
+    margin-bottom: 8px;
+  }
+} 

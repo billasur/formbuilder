@@ -1,0 +1,42 @@
+/* High contrast mode for accessibility */
+body.high-contrast {
+  /* Override colors for high contrast */
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --link-color: #ffff00;
+  --primary-color: #00ffff;
+  --focus-color: #ff00ff;
+  --error-color: #ff0000;
+  --success-color: #00ff00;
+  --border-color: #ffffff;
+}
+
+body.high-contrast .ant-btn {
+  border: 2px solid var(--border-color);
+}
+
+body.high-contrast .ant-card {
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body.high-contrast .ant-form-item-label > label {
+  color: var(--text-color);
+}
+
+body.high-contrast a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+body.high-contrast :focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+body.high-contrast .ant-btn-primary {
+  background-color: var(--primary-color);
+  color: #000000;
+  border-color: var(--border-color);
+} 

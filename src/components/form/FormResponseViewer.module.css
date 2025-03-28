@@ -1,0 +1,76 @@
+.responseViewerCard {
+  margin-bottom: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.loadingContainer {
+  padding: 24px 0;
+}
+
+.responsesList {
+  margin-top: 16px;
+}
+
+.unreadResponse {
+  background-color: rgba(24, 144, 255, 0.05);
+}
+
+.responseDetail {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.responseMetadata {
+  background-color: #f5f5f5;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.fieldItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fieldLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.fieldValue {
+  padding-left: 12px;
+  border-left: 3px solid #f0f0f0;
+  width: 100%;
+}
+
+/* Dark mode */
+:global(.dark) .responseMetadata {
+  background-color: #1f1f1f;
+}
+
+:global(.dark) .unreadResponse {
+  background-color: rgba(24, 144, 255, 0.1);
+}
+
+:global(.dark) .fieldValue {
+  border-left-color: #303030;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+} 

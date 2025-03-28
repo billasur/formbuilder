@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User can read and write their own forms
+    match /forms/{formId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.ownerId;
+      // Allow read access to published forms
+      allow read: if resource.data.isPublished == true;
+    }
+    
+    // Public templates
+    match /templates/{templateId} {
+      allow read: if resource.data.isPublic == true;
+      // Only allow template creation/modification by admins
+      allow write: if request.auth != null && exists(/databases/$(database)/documents/users/$(request.auth.uid)) && 
+                    get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+    
+    // Form submissions
+    match /submissions/{submissionId} {
+      // Anyone can submit to a published form
+      allow create: if 
+        request.resource.data.formId != null && 
+        exists(/databases/$(database)/documents/forms/$(request.resource.data.formId)) &&
+        get(/databases/$(database)/documents/forms/$(request.resource.data.formId)).data.isPublished == true;
+      
+      // Only form owners can read submissions
+      allow read: if 
+        request.auth != null && 
+        exists(/databases/$(database)/documents/forms/$(resource.data.formId)) &&
+        get(/databases/$(database)/documents/forms/$(resource.data.formId)).data.ownerId == request.auth.uid;
+    }
+    
+    // User profiles
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+} 

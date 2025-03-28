@@ -1,0 +1,66 @@
+.selectedGroup {
+  background-color: #f0f5ff;
+  border-left: 3px solid #1890ff;
+}
+
+.groupItem {
+  cursor: pointer;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.groupItem:hover {
+  background-color: #f5f5f5;
+}
+
+.memberCount {
+  color: #8c8c8c;
+  font-size: 12px;
+}
+
+.userSearch {
+  margin-bottom: 16px;
+}
+
+.userList {
+  height: calc(100vh - 360px);
+  overflow-y: auto;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.accessButton {
+  width: 120px;
+}
+
+.groupSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.groupHeader {
+  margin-bottom: 16px;
+}
+
+.groupBody {
+  flex: 1;
+  overflow: auto;
+}
+
+/* Dark mode */
+:global(.dark) .selectedGroup {
+  background-color: #111d2c;
+  border-left-color: #177ddc;
+}
+
+:global(.dark) .groupItem:hover {
+  background-color: #1f1f1f;
+}
+
+:global(.dark) .userList {
+  border-color: #303030;
+} 

@@ -1,0 +1,40 @@
+.userGroupsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.userGroupsCard {
+  margin-bottom: 24px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.memberSection {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.formActions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .memberSection {
+    flex-direction: column;
+  }
+} 

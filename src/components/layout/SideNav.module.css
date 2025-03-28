@@ -1,0 +1,50 @@
+.sideNav {
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  background-color: #fff;
+  border-right: 1px solid #f0f0f0;
+  position: fixed;
+  left: 0;
+  z-index: 999;
+}
+
+.menuContainer {
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 60px; /* Add padding at the bottom to ensure all items are accessible */
+}
+
+.siderTrigger {
+  margin: 16px;
+  margin-bottom: 10px;
+}
+
+.hamburgerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 12px auto;
+  transition: background-color 0.3s;
+}
+
+.hamburgerButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menuItem {
+  margin: 4px 0;
+}
+
+/* Dark mode styles */
+:global(.dark) .sideNav {
+  background-color: #141414;
+  border-right-color: #303030;
+}
+
+:global(.dark) .hamburgerButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+} 

@@ -1,0 +1,37 @@
+.titleContainer {
+  margin-bottom: 24px;
+}
+
+.titleDisplay {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  margin-bottom: 0 !important;
+}
+
+.editButton {
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.titleDisplay:hover .editButton {
+  opacity: 1;
+}
+
+.editingContainer {
+  width: 100%;
+}
+
+.titleInput {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+@media (max-width: 576px) {
+  .titleInput {
+    font-size: 20px;
+  }
+} 

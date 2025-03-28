@@ -1,0 +1,44 @@
+.logicCard {
+  margin-bottom: 24px;
+  overflow: visible;
+}
+
+.logicList {
+  margin-bottom: 24px;
+}
+
+.conditionRow,
+.actionRow {
+  margin-bottom: 16px;
+  background-color: #fafafa;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.logicSection {
+  margin-bottom: 24px;
+}
+
+.logicConditions,
+.logicActions {
+  margin-bottom: 8px;
+}
+
+.conditionJoiner {
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+/* Dark mode */
+:global(.dark) .conditionRow,
+:global(.dark) .actionRow {
+  background-color: #1f1f1f;
+  border-color: #303030;
+}
+
+:global(.dark) .conditionJoiner {
+  background-color: #303030;
+} 

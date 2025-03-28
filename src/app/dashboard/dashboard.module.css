@@ -1,0 +1,73 @@
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.logo a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-dropdown-trigger {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.user-dropdown-trigger:hover {
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.username {
+  margin-left: 8px;
+  margin-right: 4px;
+}
+
+.dashboard-sider {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.sider-trigger {
+  margin: 16px 0 16px 16px;
+}
+
+.dashboard-content {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 280px;
+}
+
+/* Dark mode */
+:global(.dark) .dashboard-header,
+:global(.dark) .dashboard-sider {
+  background: #141414;
+}
+
+:global(.dark) .logo a {
+  color: #1890ff;
+}
+
+:global(.dark) .user-dropdown-trigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .dashboard-content {
+  background: #000;
+} 

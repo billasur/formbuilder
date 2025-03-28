@@ -1,0 +1,30 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /forms/{formId}/{allPaths=**} {
+      allow read: if 
+        // Allow read if form is published
+        exists(/databases/$(database)/documents/forms/$(formId)) &&
+        get(/databases/$(database)/documents/forms/$(formId)).data.isPublished == true;
+      
+      allow write: if 
+        // Allow write if user owns the form
+        request.auth != null &&
+        exists(/databases/$(database)/documents/forms/$(formId)) &&
+        get(/databases/$(database)/documents/forms/$(formId)).data.ownerId == request.auth.uid;
+    }
+    
+    match /users/{userId}/{allPaths=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+    
+    match /templates/{allPaths=**} {
+      allow read: if true;  // Public read access for templates
+      allow write: if 
+        // Only admins can modify templates
+        request.auth != null &&
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.isAdmin == true;
+    }
+  }
+} 

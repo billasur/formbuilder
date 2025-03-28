@@ -1,0 +1,61 @@
+.uploaderContainer {
+  margin-bottom: 16px;
+}
+
+.uploader {
+  padding: 16px;
+}
+
+.fileCard {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.fileInfo {
+  flex: 1;
+  margin: 0 12px;
+  overflow: hidden;
+}
+
+.fileSize {
+  font-size: 12px;
+  display: block;
+}
+
+.progressBar {
+  margin-top: 12px;
+}
+
+.helperText {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.previewContainer {
+  max-width: 100%;
+  max-height: 300px;
+  overflow: auto;
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.imagePreview {
+  max-width: 100%;
+  max-height: 280px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Dark mode */
+:global(.dark) .previewContainer {
+  border-color: #303030;
+  background-color: #141414;
+}
+
+:global(.dark) .fileCard {
+  background-color: #1f1f1f;
+} 

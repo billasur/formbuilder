@@ -1,0 +1,41 @@
+.importCard {
+  margin-bottom: 24px;
+}
+
+.description {
+  margin-bottom: 24px;
+}
+
+.radioGroup {
+  margin-bottom: 24px;
+}
+
+.uploader {
+  margin-bottom: 24px;
+}
+
+.jsonInput {
+  margin-bottom: 24px;
+  font-family: monospace;
+}
+
+.nameInput {
+  margin-bottom: 24px;
+}
+
+.actionButtons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.errorAlert {
+  margin-bottom: 24px;
+}
+
+/* Dark mode */
+:global(.dark) .jsonInput {
+  background-color: #141414;
+  color: #f5f5f5;
+  border-color: #303030;
+} 
